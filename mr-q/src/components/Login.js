@@ -55,7 +55,7 @@ export default function Login(props) {
     console.log(formValues);
     e.preventDefault();
     axiosWithAuth()
-      .post('', formValues)
+      .post('https://devqueapi.herokuapp.com/auth/login', formValues)
       .then((res) => {
         console.log(res);
         localStorage.setItem('user', formValues.username.toString());
@@ -85,7 +85,7 @@ export default function Login(props) {
         <div>
           <label>
             <input
-              className="input-style"
+              
               value={formValues.username}
               onChange={onInputChange}
               name="username"

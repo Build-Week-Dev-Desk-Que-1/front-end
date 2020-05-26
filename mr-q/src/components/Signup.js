@@ -141,8 +141,8 @@ export default function Signup() {
               onChange={onInputChange}
               name='role'
             >
-              <option defaultValue='Student'>Student</option>
-              <option value='Helper'>Helper</option>
+              <option value='student'>student</option>
+              <option value='helper'>helper</option>
             </select>
           </label>
         </div>
