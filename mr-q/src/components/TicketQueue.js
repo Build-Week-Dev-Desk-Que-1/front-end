@@ -20,7 +20,7 @@ export default function TicketQue() {
     <>
       <div className="ticket-que-container">
         <h1>Ticket Queue</h1>
-        <button id="ticket-but" onClick={createTicket}>
+        <button  onClick={createTicket}>
           Add Ticket
         </button>
         <TicketList />

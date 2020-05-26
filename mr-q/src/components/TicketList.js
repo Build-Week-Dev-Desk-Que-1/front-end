@@ -18,6 +18,7 @@ const TicketList = () => {
               }}
             >
               <div >
+                  {/* How to display if it's done or not */}
               <h1 className={`resolved${ticket.resolved ? "-on" : ""}`}>Resolved!</h1>
                 <h4>{ticket.category}</h4>
                 <p> {ticket.title}</p>
