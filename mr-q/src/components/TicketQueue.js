@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import TicketList from './TicketList';
 import { TicketContext } from '../contexts/TicketContext';
 
-export default function TicketQue() {
+export default function TicketQueue() {
   const { role } = useContext(TicketContext);
 
   let history = useHistory();

@@ -4,10 +4,11 @@ import PrivateRoute from './components/PrivateRoute'
 import Login from './components/Login'
 import Signup from './components/Signup'
 import Header from './components/Header'
-import TicketQue from './components/TicketQueue'
+import TicketQueue from './components/TicketQueue'
 import './App.css'
 import { axiosWithAuth } from './utils/axiosWithAuth'
 import { TicketContext } from './contexts/TicketContext'
+import CreateTicket from "./components/CreateTicket"
 export default function App() {
   //functions for context
   const [tickets, setTickets] = useState([]);
@@ -108,7 +109,7 @@ console.log(role);
             <Route exact path="/" component={Signup} />
             <Route path="/login" component={Login} />
             <Route path="/signup" component={Signup} />
-            <PrivateRoute exact path="/protected" component={TicketQue} />
+            <PrivateRoute exact path="/protected" component={TicketQueue} />
             <PrivateRoute exact path="/createTicket" component={CreateTicket} />
           </Switch>
         </Router>
