@@ -22,7 +22,7 @@ const initialFormErrors = {
 export default function Login(props) {
   const [formValues, setFormValues] = useState(initialFormValues);
   const [formErrors, setFormErrors] = useState(initialFormErrors);
-  const { setRole, setUser, setCounter, counter } = useContext(TicketContext);
+  const { setRole, setUser} = useContext(TicketContext);
   let history = useHistory();
 
   const onInputChange = (evt) => {
@@ -55,7 +55,7 @@ export default function Login(props) {
     console.log(formValues);
     e.preventDefault();
     axiosWithAuth()
-      .post('Backendhere', formValues)
+      .post('', formValues)
       .then((res) => {
         console.log(res);
         localStorage.setItem('user', formValues.username.toString());
@@ -75,14 +75,14 @@ export default function Login(props) {
   return (
     <div >
       <form onSubmit={handleSubmit} >
-        <h2 className="splash-h2s">Login</h2>
+        <h2>Login</h2>
         <br></br>
         <div>
           {formErrors.username}
           {formErrors.password}
         </div>
 
-        <div className="username">
+        <div>
           <label>
             <input
               className="input-style"
@@ -94,7 +94,7 @@ export default function Login(props) {
           </label>
         </div>
 
-        <div className="password">
+        <div>
           <label>
             <input
               
@@ -113,4 +113,5 @@ export default function Login(props) {
         </div>
       </form>
     </div>
-  );
+  )
+}

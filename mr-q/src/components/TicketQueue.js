@@ -18,7 +18,7 @@ export default function TicketQueue() {
 
   return (
     <>
-      <div className="ticket-que-container">
+      <div>
         <h1>Ticket Queue</h1>
         <button  onClick={createTicket}>
           Add Ticket
