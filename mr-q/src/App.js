@@ -1,13 +1,20 @@
-import React, { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import PrivateRoute from './components/PrivateRoute'
-import Login from './components/Login'
-import Signup from './components/Signup'
-import Header from './components/Header'
-import TicketQue from './components/TicketQueue'
-import './App.css'
-import { axiosWithAuth } from './utils/axiosWithAuth'
-import { TicketContext } from './contexts/TicketContext'
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+//importing components
+import CreateTicket from './components/CreateTicket';
+import PrivateRoute from './components/PrivateRoute';
+import Login from './components/Login';
+import Signup from './components/Signup';
+import Header from './components/Header';
+import TicketQue from './components/TicketQueue';
+import './App.css';
+
+import { axiosWithAuth } from './utils/axiosWithAuth';
+
+//import contexts
+import { TicketContext } from './contexts/TicketContext';
+
 export default function App() {
   //functions for context
   const [tickets, setTickets] = useState([]);
@@ -17,7 +24,7 @@ const [counter, setCounter] = useState(0)
 
   useEffect(() => {
     axiosWithAuth()
-      .get(``)
+      .get(`https://devdeskapi.herokuapp.com/tickets`)
       .then((res) => {
         // console.log(res);
         
@@ -73,7 +80,7 @@ console.log(role);
   console.log(user);
   const getTickets = () => {
     axiosWithAuth()
-      .get(`place backend here`)
+      .get(`https://devqueapi.herokuapp.com/tickets`)
       .then((res) => {
         // console.log(res);
         setTickets(res.data);
@@ -116,4 +123,3 @@ console.log(role);
     </div>
   );
 }
-

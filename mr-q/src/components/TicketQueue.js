@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import TicketList from './TicketList';
 import { TicketContext } from '../contexts/TicketContext';
 
-export default function TicketQue() {
+export default function TicketQueue() {
   const { role } = useContext(TicketContext);
 
   let history = useHistory();
@@ -18,9 +18,9 @@ export default function TicketQue() {
 
   return (
     <>
-      <div className="ticket-que-container">
+      <div>
         <h1>Ticket Queue</h1>
-        <button id="ticket-but" onClick={createTicket}>
+        <button  onClick={createTicket}>
           Add Ticket
         </button>
         <TicketList />
