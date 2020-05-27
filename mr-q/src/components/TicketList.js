@@ -11,7 +11,7 @@ const TicketList = () => {
         {/* console.log(ticket); */}
         return (
           <>
-            <div
+            <div className="ticketbox"
               
               onClick={() => {
                 toggleItem(ticket.id);
@@ -31,7 +31,8 @@ const TicketList = () => {
             <Ticket ticket={ticket} />
           </>
         );
-      })}
+        } )}
+        {/*^ end of map */}
     </>
   );
 };

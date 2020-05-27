@@ -73,7 +73,7 @@ export default function Login(props) {
   console.log(formValues);
 
   return (
-    <div >
+    <div className="login-form">
       <form onSubmit={handleSubmit} >
         <h2>Login</h2>
         <br></br>
@@ -108,7 +108,7 @@ export default function Login(props) {
 
         <div >
           <label>
-            <button>Login</button>
+            <button className="login-button">Login</button>
           </label>
         </div>
       </form>

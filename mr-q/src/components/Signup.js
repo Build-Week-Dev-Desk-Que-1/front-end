@@ -86,7 +86,7 @@ export default function Signup() {
   };
 
   return (
-    <div >
+    <div className= "login-form" >
       <form  onSubmit={handleSubmit}>
         <h2>Sign Up</h2>
         <br></br>
@@ -149,7 +149,7 @@ export default function Signup() {
 
         <div>
           <label>
-            <button>Sign Up</button>
+            <button className="login-button">Sign Up</button>
           </label>
         </div>
       </form>

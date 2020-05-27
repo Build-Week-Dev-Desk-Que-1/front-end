@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,700&family=Roboto+Mono:ital,wght@1,700&display=swap');
+
 .App {
   text-align: center;
 }
@@ -13,7 +15,7 @@
   }
 }
 
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -22,7 +24,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 .App-link {
   color: #61dafb;
@@ -33,6 +35,130 @@
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: scale3d() scale3d() scale3d() scale3d() scale3d() rotate(360deg);
   }
+}
+/*SECTION STYLING*/
+
+.page-container {
+  background: silver;
+  padding-top: 1%;
+  padding-bottom: 10%;
+}
+
+.login-form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 5%;
+  background-color: blue;
+  box-shadow: black;
+}
+.login-button {
+  width: 130px;
+  background: rgb(32, 61, 90);
+  border-radius: 5px;
+  color: white;
+}
+.login-button:hover {
+  background: silver;
+}
+.submit-button {
+  padding-top: 2%;
+}
+.errors {
+  color: red;
+}
+
+.ticketbox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px auto;
+  padding: 5%;
+  background-color: black;
+  width: 50%;
+  border-RADIUS: 44px;
+
+}
+
+.headerNavBar{
+  background-color: darkred;
+}
+.navbar-toggler-icon{
+  background-color: white;
+}
+
+h1 {
+  color: white;
+}
+
+h2 {
+  color: white;
+}
+
+h3 {
+  color: white;
+}
+
+.splash-h2s {
+  font-size: 32px;
+}
+.splash-h3s {
+  font-size: 20px;
+}
+.splash-h4s {
+  color: white;
+}
+.menu-links {
+  color: white;
+}
+.menu-links:hover {
+  color: black;
+}
+
+
+.login-splash {
+  display: flex;
+  flex-direction: row;
+
+  width: 30%;
+  margin: auto;
+
+  background: LIGHTSLATEGREY;
+  border-radius: 20px;
+  box-shadow: -10px 10px 10px white;
+}
+/*media queries*/
+.topic {
+  background: white;
+}
+#sub-but {
+  background: white;
+  margin: 15% 5%;
+  color: black;
+  border-radius: 10px;
+}
+#ticket-but {
+  background: white;
+  border-radius: 10px;
+}
+
+.input-style {
+  border-radius: 20px;
+  border: 2px solid dodgerblue;
+  background: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.header {
+  width: 50%;
+  margin: auto;
+}
+
+.logo {
+  font-family: 'IBM Plex Sans', sans-serif;
 }
