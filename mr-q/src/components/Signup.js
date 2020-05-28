@@ -64,6 +64,7 @@ export default function Signup() {
  // console.log(formValues);
 
   const handleSubmit = (e) => {
+    console.log(formValues)
     e.preventDefault();
     axiosWithAuth()
       .post("https://devqueapi.herokuapp.com/auth/register", formValues)
@@ -141,8 +142,8 @@ export default function Signup() {
               onChange={onInputChange}
               name='role'
             >
-              {/* added this blank option because it wouldnt allow sign in without selecting option */}
-              <option Defaultvalue =''></option>
+              {/* added this blank option because it wouldnt allow sign in without selecting option  */}
+              <option defaultValue =''></option>
               <option value='student'>student</option>
               <option value='helper'>helper</option>
             </select>
