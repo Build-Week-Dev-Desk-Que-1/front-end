@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useHistory } from "react-router-dom";
-import { AiOutlineCloseCircle } from "react-icons/ai";
+
 import { DeleteTicketModal } from "./DeleteTicketModal";
 import * as yup from "yup";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
@@ -82,22 +82,25 @@ const CreateTicket = () => {
   return (
     //modal
     <div className='ticket-box'>
-     
+      <DeleteTicketModal
+        modalState={modalState}
+        setModalState={setModalState}
+      />
       <h1> Let's submit a help Ticket.</h1>
       <h4>
-        <span className='asterisk'>*</span> Required Fields
-        <AiOutlineCloseCircle className='no-help' onClick={handleModalState} />
+        <span >*</span> Required Fields
+        <button onClick={handleModalState} />
       </h4>
 
       <form onSubmit={handleSubmit}>
         <h3>
-          <span className='asterisk'>*</span>What's going on?
+          <span >*</span>What's going on?
         </h3>
 
         <input name='title' value={formState.title} onChange={handleChange} />
 
         <h3>
-          <span className='asterisk'>*</span>What is this issue about?
+          <span >*</span>What is this issue about?
         </h3>
         <select
           name='category'
@@ -127,7 +130,7 @@ const CreateTicket = () => {
           onChange={handleChange}
         />
 
-        <button id='sub-but' disabled={disableButton}>
+        <button  disabled={disableButton}>
           Submit Ticket
         </button>
       </form>
