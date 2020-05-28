@@ -41,6 +41,8 @@ const [counter, setCounter] = useState(0)
         return { ...ticket, clicked: false };
       })
     );
+    
+ 
 
     setTickets((state) =>
       state.map((item) => {
@@ -57,6 +59,12 @@ const [counter, setCounter] = useState(0)
       })
     );
   }
+
+  function deleteTicket(itemId){
+    axiosWithAuth()
+    .delete(`https://devdeskapi.herokuapp.com/tickets/${itemId}`)
+    getTickets()
+    }
 
   function resolveTicket(ticketId) {
     setTickets((state) =>
@@ -80,7 +88,7 @@ console.log(role);
   console.log(user);
   const getTickets = () => {
     axiosWithAuth()
-      .get(`https://devqueapi.herokuapp.com/tickets`)
+      .get(`https://devdeskapi.herokuapp.com/tickets`)
       .then((res) => {
         // console.log(res);
         setTickets(res.data);
@@ -106,6 +114,7 @@ console.log(role);
           resolveTicket,
           assignHelper,
           reassign,
+          deleteTicket,
         }}>
         <Router>
           <Header />
@@ -123,3 +132,5 @@ console.log(role);
     </div>
   );
 }
+
+

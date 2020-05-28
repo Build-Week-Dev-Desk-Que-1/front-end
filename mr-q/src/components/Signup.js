@@ -7,11 +7,11 @@ const formSchema = yup.object().shape({
   email: yup.string().email("Invalid email").required("this is req"),
   username: yup
     .string()
-    .min(5, "*a username is required")
+    .min(6, "*a username is required")
     .required("this is req"),
   password: yup
     .string()
-    .min(5, "*a password is required")
+    .min(6, "*a password is required")
     .required("this is req"),
 
   role: yup.string().required("this is required"),
@@ -61,7 +61,7 @@ export default function Signup() {
       [name]: value,
     });
   };
-  console.log(formValues);
+ // console.log(formValues);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -141,6 +141,8 @@ export default function Signup() {
               onChange={onInputChange}
               name='role'
             >
+              {/* added this blank option because it wouldnt allow sign in without selecting option */}
+              <option Defaultvalue =''></option>
               <option value='student'>student</option>
               <option value='helper'>helper</option>
             </select>

@@ -53,12 +53,10 @@
   align-items: center;
   margin: auto;
   padding: 5%;
-  background-color: blue;
-  box-shadow: black;
 }
 .login-button {
   width: 130px;
-  background: rgb(32, 61, 90);
+  background: dodgerblue;
   border-radius: 5px;
   color: white;
 }
@@ -71,26 +69,6 @@
 .errors {
   color: red;
 }
-
-.ticketbox{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px auto;
-  padding: 5%;
-  background-color: black;
-  width: 50%;
-  border-RADIUS: 44px;
-
-}
-
-.headerNavBar{
-  background-color: darkred;
-}
-.navbar-toggler-icon{
-  background-color: white;
-}
-
 h1 {
   color: white;
 }
@@ -119,7 +97,6 @@ h3 {
   color: black;
 }
 
-
 .login-splash {
   display: flex;
   flex-direction: row;
@@ -127,7 +104,7 @@ h3 {
   width: 30%;
   margin: auto;
 
-  background: LIGHTSLATEGREY;
+  background: darkblue;
   border-radius: 20px;
   box-shadow: -10px 10px 10px white;
 }
@@ -161,4 +138,145 @@ h3 {
 
 .logo {
   font-family: 'IBM Plex Sans', sans-serif;
+}
+/*TICKET QUEUE STYLES*/
+.ticket-que-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: darkblue;
+  padding: 1% 10%;
+}
+
+/*CREATE TICKET STYLES*/
+.ticket-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+  border-radius: 20px;
+  background: darkblue;
+  padding: 2%;
+  box-shadow: -10px 10px 10px white;
+}
+@media (max-width: 800px) {
+  .login-splash {
+    width: 80%;
+  }
+  .ticket-box {
+    width: 95%;
+    margin: auto;
+  }
+}
+@media (max-width: 500px) {
+  .header {
+    width: 80%;
+  }
+
+  .ticket-box {
+    width: 95%;
+    margin: auto;
+  }
+}
+.asterisk {
+  color: firebrick;
+}
+
+.littleCard {
+  text-align: center;
+  width: 25%;
+  padding: 1%;
+
+  border: 2px solid white;
+  border-radius: 5px;
+  margin: 5% 70% 0% 0%;
+  color: whitesmoke;
+  background: black;
+  box-shadow: 10px 10px 10px dodgerblue;
+}
+
+.bigCard {
+  display: none;
+}
+
+.bigCardOn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1%;
+  position: relative;
+  margin: 8.5% 16%;
+
+  width: 45%;
+  border: 2px solid darkslategrey;
+  border-radius: 5px;
+  color: white;
+  background: darkslategrey;
+  box-shadow: -10px 10px 10px black;
+}
+#help-buttons {
+  border-radius: 10px;
+  margin: 5px;
+  padding: 5px;
+  box-shadow: -3px 3px silver;
+  font-weight: bold;
+}
+#help-buttons:hover {
+  background: lightgrey;
+}
+#unAS {
+  border-radius: 5px;
+  width: 30%;
+}
+@media (max-width: 800px) {
+  #unAS {
+    width: auto;
+  }
+}
+@media (max-width: 800px) {
+  .bigCardOn {
+    width: 40%;
+    margin: 15%;
+  }
+}
+@media (max-width: 500px) {
+  .bigCardOn {
+    margin: 22% 25%;
+    padding: 3%;
+  }
+  .littleCard {
+    width: 40%;
+    margin: 5% 65% 0% 0%;
+  }
+}
+
+.cardContainer {
+  margin-right: 70%;
+  margin-top: 30%;
+  color: white;
+}
+h6 {
+  border-radius: 3%;
+  border: 3px solid white;
+  width: 20%;
+  text-align: center;
+  padding: 1%;
+}
+
+.Done {
+  display: none;
+}
+.Done-on {
+  display: block;
+  color: green;
+}
+
+.helper {
+  display: none;
+}
+
+.helper-on {
+  display: flex;
 }
