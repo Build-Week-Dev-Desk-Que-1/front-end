@@ -11,15 +11,42 @@ const TicketList = () => {
         {/* console.log(ticket); */}
         return (
           <>
-            <div className="ticketbox"
+            <div
+              className="littleCard"
+              onClick={() => {
+                toggleItem(ticket.id);
+              }}
+            >
+              <div className="little-content">
+              <h1 className={`Done${ticket.resolved ? "-on" : ""}`}>Done!</h1>
+                <h4>{ticket.category}</h4>
+                <p> {ticket.title}</p>
+              </div>
+
+              <div>
+                <h5 className="assigned"> {ticket.assigned}</h5>
+              </div>
+            </div>
+            <Ticket ticket={ticket} />
+          </>
+        );
+      })}
+    </>
+  );
+};
+
+export default TicketList;
+
+
+{/* <div className="ticketbox"
               
               onClick={() => {
                 toggleItem(ticket.id);
               }}
             >
               <div >
-                  {/* How to display if it's done or not */}
-              <h1 className={`resolved${ticket.resolved ? "-on" : ""}`}>Resolved!</h1>
+                  
+              
                 <h4>{ticket.category}</h4>
                 <p> {ticket.title}</p>
               </div>
@@ -27,14 +54,4 @@ const TicketList = () => {
               <div>
                 <h5 > {ticket.assigned}</h5>
               </div>
-            </div>
-            <Ticket ticket={ticket} />
-          </>
-        );
-        } )}
-        {/*^ end of map */}
-    </>
-  );
-};
-
-export default TicketList;
+            </div> */}
