@@ -20,7 +20,7 @@ const Ticket = ({ ticket }) => {
         <h5>What I've tried</h5>
         <p>{ticket.tried}</p>
       </div>
-      <h6 id="unAS"> {ticket.assigned}</h6>
+      <h6 className="whohelper"> {ticket.assigned}</h6>
 
       <div className={`helper${role === 'helper' ? '-on' : ''}`}>
         <button id="help-buttons" onClick={() => assignHelper(ticket.id, user)}>
